@@ -43,16 +43,28 @@ public class SuperMnozenie {
             double aL = Double.parseDouble(a);
             double bL = Double.parseDouble(b);
             double value = aL * bL;
+            
             return Double.toString(value);
                 }
         else if (aa.contains(".") || bb.contains("."))
         {
-            
             float aFloat = Float.parseFloat(a);
             float bFloat = Float.parseFloat(b);
-            float value = aFloat*bFloat;
             
-            return Float.toString(value);
+            if (aFloat%1 == 0 && bFloat%1 == 0)
+            {
+                int value1 = Math.round(aFloat)*Math.round(bFloat);
+                return Integer.toString(value1);
+            }
+            else      
+            {
+            double aL = Double.parseDouble(a);
+            double bL = Double.parseDouble(b);
+            double valueD = aL * bL;
+            return Double.toString(valueD);
+            }
+           
+            
         }
         
         else 

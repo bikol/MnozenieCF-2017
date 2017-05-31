@@ -107,7 +107,25 @@ public class SuperMnozenieTest {
     @Test
     public void testMul12()
     {
-        assertEquals("-1.25", SuperMnozenie.mul("-0.625000","1"));
+        assertEquals("-0.625", SuperMnozenie.mul("-0.625000","1"));
     }
     
+    /*
+    Mikołaj Stasiak
+    */
+     @Test
+    public void testMS1()
+    {
+        assertEquals("0.00025", SuperMnozenie.mul("0.00025","1"));
+    }
+    @Test
+    public void testMS2()
+    {
+        assertEquals("0.00015707963267948965", SuperMnozenie.mul(""+Math.PI,"0.00005"));
+    }
+    @Test
+    public void testMS3()
+    {
+        assertEquals("0.02718281828459045", SuperMnozenie.mul("0.01",""+Math.E));
+    }
 }
