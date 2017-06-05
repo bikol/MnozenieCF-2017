@@ -148,8 +148,7 @@ public class SuperMnozenieTest {
     {
         assertEquals("1E0F3", SuperMnozenie.mul("0.01",""+Math.E));
     }
-	
-	/*
+    /*
     Maciej Strelczuk
     */
 	@Test
@@ -167,5 +166,4 @@ public class SuperMnozenieTest {
 	{
 		assertEquals("66", SuperMnozenie.mul("0011", Math.cbrt(-27)));
 	}
-	
 }
