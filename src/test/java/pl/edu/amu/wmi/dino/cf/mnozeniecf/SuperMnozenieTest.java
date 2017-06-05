@@ -114,18 +114,43 @@ public class SuperMnozenieTest {
     Mikołaj Stasiak
     */
      @Test
-    public void testMS1()
+    public void testMul13()
     {
         assertEquals("0.00025", SuperMnozenie.mul("0.00025","1"));
     }
     @Test
-    public void testMS2()
+    public void testMul14()
     {
         assertEquals("0.00015707963267948965", SuperMnozenie.mul(""+Math.PI,"0.00005"));
     }
     @Test
-    public void testMS3()
+    public void testMul15()
     {
-        assertEquals("0.02718281828459045", SuperMnozenie.mul("0.01",""+Math.E));
+        assertEquals("0.027182818284590453", SuperMnozenie.mul("0.01",""+Math.E));
+    }
+    
+    /*
+    Krzysztof Michalak-Gajda
+    */
+     @Test
+    public void testMul16()
+    {
+        assertEquals("0", SuperMnozenie.mul("-0","0"));
+    }
+    @Test
+    public void testMul17()
+    {
+        assertEquals("-12.566370614359172", SuperMnozenie.mul("-" + Math.PI,"4.0"));
+        assertEquals("-12.566370614359172", SuperMnozenie.mul("4.0","-" + Math.PI));
+    }
+    @Test
+    public void testMul18()
+    {
+        Random rand = new Random();
+        for (int i = 0; i < 100; i++) {
+            float r = rand.nextFloat();
+            assertEquals("0", SuperMnozenie.mul("-0", Float.toString(r)));
+            assertEquals("0", SuperMnozenie.mul(Float.toString(r), "-0"));
+        }
     }
 }
