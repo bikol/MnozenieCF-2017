@@ -126,6 +126,9 @@ public class SuperMnozenieTest {
     @Test
     public void testMS3()
     {
-        assertEquals("0.02718281828459045", SuperMnozenie.mul("0.01",""+Math.E));
+        assertEquals("0.027182818284590453", SuperMnozenie.mul("0.01",""+Math.E));
     }
+    /*
+    Krzysztof Strzelecki
+    */
 }
