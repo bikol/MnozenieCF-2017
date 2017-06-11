@@ -114,38 +114,18 @@ public class SuperMnozenieTest {
     Mikołaj Stasiak
     */
      @Test
-    public void testMul13()
+    public void testMS1()
     {
         assertEquals("0.00025", SuperMnozenie.mul("0.00025","1"));
     }
     @Test
-    public void testMul14()
+    public void testMS2()
     {
         assertEquals("0.00015707963267948965", SuperMnozenie.mul(""+Math.PI,"0.00005"));
     }
     @Test
-    public void testMul15()
+    public void testMS3()
     {
         assertEquals("0.02718281828459045", SuperMnozenie.mul("0.01",""+Math.E));
-    }
-    
-    
-    /*
-    Dawid Kubicki
-    */
-    @Test
-    public void testMul16()
-    {
-        assertEquals("0.00025", SuperMnozenie.mul("0.00025",""+Math.E));
-    }
-    @Test
-    public void testMul17()
-    {
-        assertEquals("0", SuperMnozenie.mul("","0.00005"));
-    }
-    @Test
-    public void testMul18()
-    {
-        assertEquals("1E0F3", SuperMnozenie.mul("0.01",""+Math.E));
     }
 }
