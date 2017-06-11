@@ -5,147 +5,80 @@
  */
 package pl.edu.amu.wmi.dino.cf.mnozeniecf;
 
-import java.util.Random;
-import org.junit.Test;
-import static org.junit.Assert.*;
-
 /**
  *
  * @author bikol
  */
-public class SuperMnozenieTest {
-
+public class SuperMnozenie {
     
-    public SuperMnozenieTest() {
-    }
-
-    @Test
-    public void testMul() {
-        assertEquals("1", SuperMnozenie.mul("1", "1"));
-    }
-
-    /**
-     * Patryk Żywica
-     */
-    @Test
-    public void testMul1() {
-        assertEquals("0", SuperMnozenie.mul("1", "0"));
-    }
-
-    @Test
-    public void testMul2() {
-        Random rand = new Random();
-
-        for (int i = 0; i < 1000; i++) {
-            int r = rand.nextInt();
-            assertEquals("0", SuperMnozenie.mul("0", Integer.toString(r)));
-            assertEquals("0", SuperMnozenie.mul(Integer.toString(r), "0"));
-        }
-    }
-
-    @Test
-    public void testMul3() {
-        assertEquals("-1", SuperMnozenie.mul("1", "-1"));
-    }
-    
-     /**
-     * Maciej Wanat
-     */
-    
-    @Test
-    public void testMul4() {       
-        assertEquals("1000000000000", SuperMnozenie.mul("1000000", "1000000"));      
-    }
-    
-    @Test
-    public void testMul5() {       
-        assertEquals("1.5", SuperMnozenie.mul("1.5", "1"));      
-    }
-    
-    @Test 
-    public void testMul6() {       
-        assertEquals("-1.5", SuperMnozenie.mul("-1.5", "1"));      
-    }
+   
     
     
     /**
-     * Adrian Witczak
+     * Wylicza iloczyn dwóch liczb (dowolnych).
+     * 
+     * @param a
+     * @param b
+     * @return 
      */
-    
-    @Test
-    public void testMul7() {       
-        assertEquals("0.222332666778", SuperMnozenie.mul("0.333666", "0.666333"));      
-    }
-    
-    @Test
-    public void testMul8() {       
-        assertEquals("0", SuperMnozenie.mul("0.0", "100000000000"));      
-    }
-    
-    @Test 
-    public void testMul9() {       
-        assertEquals("0", SuperMnozenie.mul("-1.5", "0"));      
-    }
-    
-     /**
-     * Dymitr Sołtysiak
-     */
-    
-    @Test
-    public void testMul10()
-    {
-        assertEquals("1", SuperMnozenie.mul("" + Math.pow(2,0), "1"));
-    }
-    
-    @Test
-    public void testMul11()
-    {
+    public static String mul(String a, String b){
         
-        assertEquals("2.718281828459045", SuperMnozenie.mul(""+ Math.E,"1"));
+        String aa = a;
+        String bb = b;
+        
+        
+        
+        if (aa == "0" || bb == "0")
+        {
+            int value = 0;
+            return Integer.toString(value);
+        }
+        else if (aa == "0.0" || bb == "0.0")
+        {
+           int value = 0;
+           return Integer.toString(value);
+        }
+        else if (aa.contains("0.") || bb.contains("0."))
+        {
+            double aL = Double.parseDouble(a);
+            double bL = Double.parseDouble(b);
+            double value = aL * bL;
+            
+            return Double.toString(value);
+                }
+        else if (aa.contains(".") || bb.contains("."))
+        {
+            float aFloat = Float.parseFloat(a);
+            float bFloat = Float.parseFloat(b);
+            
+            if (aFloat%1 == 0 && bFloat%1 == 0)
+            {
+                int value1 = Math.round(aFloat)*Math.round(bFloat);
+                return Integer.toString(value1);
+            }
+            else      
+            {
+            double aL = Double.parseDouble(a);
+            double bL = Double.parseDouble(b);
+            double valueD = aL * bL;
+            return Double.toString(valueD);
+            }
+           
+            
+        }
+        
+        else 
+        {
+        long aLong = Long.parseLong(a);
+        long bLong = Long.parseLong(b);  
+        
+        long value = aLong*bLong;
+        return Long.toString(value);
+        }
+        
+        
+        
+        
     }
     
-    @Test
-    public void testMul12()
-    {
-        assertEquals("-0.625", SuperMnozenie.mul("-0.625000","1"));
-    }
-    
-    /*
-    Mikołaj Stasiak
-    */
-     @Test
-    public void testMul13()
-    {
-        assertEquals("0.00025", SuperMnozenie.mul("0.00025","1"));
-    }
-    @Test
-    public void testMul14()
-    {
-        assertEquals("0.00015707963267948965", SuperMnozenie.mul(""+Math.PI,"0.00005"));
-    }
-    @Test
-    public void testMul15()
-    {
-        assertEquals("0.02718281828459045", SuperMnozenie.mul("0.01",""+Math.E));
-    }
-    
-    
-    /*
-    Dawid Kubicki
-    */
-    @Test
-    public void testMul16()
-    {
-        assertEquals("0.00025", SuperMnozenie.mul("0.00025",""+Math.E));
-    }
-    @Test
-    public void testMul17()
-    {
-        assertEquals("0", SuperMnozenie.mul("","0.00005"));
-    }
-    @Test
-    public void testMul18()
-    {
-        assertEquals("1E0F3", SuperMnozenie.mul("0.01",""+Math.E));
-    }
 }
