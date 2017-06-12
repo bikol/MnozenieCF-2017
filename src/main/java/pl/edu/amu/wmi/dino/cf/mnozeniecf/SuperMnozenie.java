@@ -44,11 +44,9 @@ public class SuperMnozenie {
             double aL = Double.parseDouble(a);
             double bL = Double.parseDouble(b);
             double value = aL * bL;
-           // if (value == 0.00025) return "0.00025" + printf(value); else
             NumberFormat myformatter = new DecimalFormat("##0.####################");  
             String result = myformatter.format(value);
             return result.replaceAll(",", ".");
-            //return Double.toString(value);
         }
         else if (aa.contains(".") || bb.contains("."))
         {
