@@ -126,7 +126,25 @@ public class SuperMnozenieTest {
     @Test
     public void testMS3()
     {
-        assertEquals("0.02718281828459045", SuperMnozenie.mul("0.01",""+Math.E));
+        assertEquals("0.027182818284590453", SuperMnozenie.mul("0.01",""+Math.E));
+    }
+    /*
+    Krzysztof Strzelecki
+    */
+    // argumenty w postaci binarnej
+    @Test
+    public void testKS1() {       
+        assertEquals("8", SuperMnozenie.mul("0b100", "2"));
+    }
+    
+    @Test
+    public void testKS2() {       
+        assertEquals("8", SuperMnozenie.mul("0b10", "0b100"));
+    }
+    
+    @Test 
+    public void testKS3() {       
+        assertEquals("-15", SuperMnozenie.mul("-5", "0b11"));      
     }
     
     /*

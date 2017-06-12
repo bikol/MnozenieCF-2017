@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package pl.edu.amu.wmi.dino.cf.mnozeniecf;
-
+import java.text.NumberFormat;
+import java.text.DecimalFormat;
 /**
  *
  * @author bikol
@@ -58,9 +59,10 @@ public class SuperMnozenie {
             double aL = Double.parseDouble(a);
             double bL = Double.parseDouble(b);
             double value = aL * bL;
-            
-            return Double.toString(value);
-                }
+            NumberFormat myformatter = new DecimalFormat("##0.####################");  
+            String result = myformatter.format(value);
+            return result.replaceAll(",", ".");
+        }
         else if (aa.contains(".") || bb.contains("."))
         {
             float aFloat = Float.parseFloat(a);
