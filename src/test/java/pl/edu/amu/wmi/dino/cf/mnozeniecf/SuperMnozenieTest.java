@@ -156,17 +156,15 @@ public class SuperMnozenieTest {
     {
         assertEquals("200000", SuperMnozenie.mul("100","2000"));
     }
-
-
     @Test
     public void testMul156()
     {
         assertEquals("0", SuperMnozenie.mul("0",Math.E+""));
     }
-	@Test
+    @Test
     public void testMul1356()
     {
-        assertEquals("0.3141972", SuperMnozenie.mul(""+Math.round(0.1),Math.PI+""));
+        assertEquals("ABBB", SuperMnozenie.mul("AB","B"));
     }
 	
 }
