@@ -131,4 +131,19 @@ public class SuperMnozenieTest {
     /*
     Krzysztof Strzelecki
     */
+    // argumenty w postaci binarnej
+    @Test
+    public void testKS1() {       
+        assertEquals("8", SuperMnozenie.mul("0b100", "2"));
+    }
+    
+    @Test
+    public void testKS2() {       
+        assertEquals("8", SuperMnozenie.mul("0b10", "0b100"));
+    }
+    
+    @Test 
+    public void testKS3() {       
+        assertEquals("-15", SuperMnozenie.mul("-5", "0b11"));      
+    }
 }
