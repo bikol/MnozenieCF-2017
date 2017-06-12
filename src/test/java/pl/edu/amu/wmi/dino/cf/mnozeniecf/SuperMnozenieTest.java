@@ -128,7 +128,7 @@ public class SuperMnozenieTest {
     {
         assertEquals("0.02718281828459045", SuperMnozenie.mul("0.01",""+Math.E));
     }
-    
+
     /*
     Maciej Strelczuk
     */
@@ -147,25 +147,26 @@ public class SuperMnozenieTest {
     {
         assertEquals("100.555505612", SuperMnozenie.mul(""+Math.sqrt(1024.50), Math.PI+""));
     }
-    
-	//
-	//Wojtek Duraj
-	@Test
+
+    /*
+     Wojtek Duraj
+     */
+    @Test
     public void testMul16()
     {
         assertEquals("200000", SuperMnozenie.mul("100","2000"));
     }
-	@Test
-    public void testMul16()
+
+
+    @Test
+    public void testMul156()
     {
         assertEquals("0", SuperMnozenie.mul("0",Math.E+""));
     }
 	@Test
-    public void testMul16()
+    public void testMul1356()
     {
         assertEquals("0.3141972", SuperMnozenie.mul(""+Math.round(0.1),Math.PI+""));
     }
-	
-	//
 	
 }
