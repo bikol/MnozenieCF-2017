@@ -146,4 +146,24 @@ public class SuperMnozenieTest {
     public void testKS3() {       
         assertEquals("-15", SuperMnozenie.mul("-5", "0b11"));      
     }
+    
+    /*
+    Maciej Strelczuk
+    */
+    @Test
+    public void testMul13()
+    {
+        assertEquals("282.70131016", SuperMnozenie.mul(""+Math.round(103.54334),Math.E+""));
+    }
+    @Test
+    public void testMul14()
+    {
+        assertEquals("3.411", SuperMnozenie.mul(""+Math.sqrt(11.635), "1"));
+    }
+    @Test
+    public void testMul15()
+    {
+        assertEquals("100.555505612", SuperMnozenie.mul(""+Math.sqrt(1024.50), Math.PI+""));
+    }
+    
 }
