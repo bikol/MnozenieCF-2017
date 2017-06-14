@@ -146,24 +146,43 @@ public class SuperMnozenieTest {
     public void testKS3() {       
         assertEquals("-15", SuperMnozenie.mul("-5", "0b11"));      
     }
-    
+
     /*
     Maciej Strelczuk
     */
     @Test
     public void testMul13()
     {
-        assertEquals("282.70131016", SuperMnozenie.mul(""+Math.round(103.54334),Math.E+""));
+        assertEquals("282.7013101597407", SuperMnozenie.mul(""+Math.round(103.54334),Math.E+""));
     }
     @Test
     public void testMul14()
     {
-        assertEquals("3.411", SuperMnozenie.mul(""+Math.sqrt(11.635), "1"));
+        assertEquals("3.411011580162108", SuperMnozenie.mul(""+Math.sqrt(11.635), "1"));
     }
     @Test
     public void testMul15()
     {
-        assertEquals("100.555505612", SuperMnozenie.mul(""+Math.sqrt(1024.50), Math.PI+""));
+        assertEquals("100.55550561215456", SuperMnozenie.mul(""+Math.sqrt(1024.50), Math.PI+""));
     }
-    
+
+    /*
+     Wojtek Duraj
+     */
+    @Test
+    public void testMul16()
+    {
+        assertEquals("200000", SuperMnozenie.mul("100","2000"));
+    }
+    @Test
+    public void testMul156()
+    {
+        assertEquals("0", SuperMnozenie.mul("0",Math.E+""));
+    }
+    @Test
+    public void testMul1356()
+    {
+        assertEquals("ABBB", SuperMnozenie.mul("AB","B"));
+    }
+	
 }
