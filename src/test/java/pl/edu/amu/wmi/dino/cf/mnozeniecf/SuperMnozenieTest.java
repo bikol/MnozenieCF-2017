@@ -135,17 +135,17 @@ public class SuperMnozenieTest {
     @Test
     public void testMul13()
     {
-        assertEquals("282.70131016", SuperMnozenie.mul(""+Math.round(103.54334),Math.E+""));
+        assertEquals("282.7013101597407", SuperMnozenie.mul(""+Math.round(103.54334),Math.E+""));
     }
     @Test
     public void testMul14()
     {
-        assertEquals("3.411", SuperMnozenie.mul(""+Math.sqrt(11.635), "1"));
+        assertEquals("3.411011580162108", SuperMnozenie.mul(""+Math.sqrt(11.635), "1"));
     }
     @Test
     public void testMul15()
     {
-        assertEquals("100.555505612", SuperMnozenie.mul(""+Math.sqrt(1024.50), Math.PI+""));
+        assertEquals("100.55550561215456", SuperMnozenie.mul(""+Math.sqrt(1024.50), Math.PI+""));
     }
 
     /*
