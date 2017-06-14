@@ -153,17 +153,36 @@ public class SuperMnozenieTest {
     @Test
     public void testMul13()
     {
-        assertEquals("282.70131016", SuperMnozenie.mul(""+Math.round(103.54334),Math.E+""));
+        assertEquals("282.7013101597407", SuperMnozenie.mul(""+Math.round(103.54334),Math.E+""));
     }
     @Test
     public void testMul14()
     {
-        assertEquals("3.411", SuperMnozenie.mul(""+Math.sqrt(11.635), "1"));
+        assertEquals("3.411011580162108", SuperMnozenie.mul(""+Math.sqrt(11.635), "1"));
     }
     @Test
     public void testMul15()
     {
-        assertEquals("100.555505612", SuperMnozenie.mul(""+Math.sqrt(1024.50), Math.PI+""));
+        assertEquals("100.55550561215456", SuperMnozenie.mul(""+Math.sqrt(1024.50), Math.PI+""));
+    }
+    
+    /**
+     * Karol Kot
+     */
+    @Test(expected = ArithmeticException.class)
+    public void shouldThrowExceptionWhenLongOverflow() {
+        SuperMnozenie.mul(String.valueOf(Long.MAX_VALUE), "2");
+    }
+
+    @Test
+    public void test20(){
+    	assertEquals("148.6411", SuperMnozenie.mul(String.valueOf(Math.sqrt(8128)), String.valueOf(Math.sqrt(Math.E))));
+    }
+    
+    @Test
+    public void test21()
+    {
+    	assertEquals("2", SuperMnozenie.mul(String.valueOf(Math.abs(-8128)), String.valueOf(Math.cosh(255))));
     }
     
 }
